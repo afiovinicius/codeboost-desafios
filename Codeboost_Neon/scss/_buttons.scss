@@ -1,0 +1,39 @@
+.btn_solid,
+.btn_outline {
+  display: inline-block;
+  padding: 0 2.6rem;
+  border-radius: 12.2rem;
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.6rem;
+  line-height: 4.8rem;
+}
+
+.btn_solid {
+  background-color: $yellow;
+  color: $yellow--text;
+  transition: background-color 0.3s ease-in;
+  &:hover {
+    background-color: $yellow--hover;
+  }
+}
+
+.btn_outline {
+  background-color: transparent;
+  color: $blue;
+  border: 0.1rem solid $blue;
+  transition: all 0.3s ease-in;
+  &:hover {
+    color: $white;
+    background-color: $blue;
+  }
+  &.white {
+    color: $white;
+    border: 0.1rem solid $white;
+    &:hover {
+      color: $blue;
+      background-color: $light;
+      border: 0.1rem solid $light;
+    }
+  }
+}

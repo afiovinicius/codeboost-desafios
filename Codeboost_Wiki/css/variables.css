@@ -1,0 +1,11 @@
+/* Variações de Estilo */
+
+:root {
+  --dark--: #050110;
+  --blue_dark: #0E091B;
+  --purple--: #454CF9;
+  --gray--: #6B7481;
+  --light--: #F8F8F8;
+  --white--: #FFFFFF;
+  --purple--dark--: rgb(142, 61, 223);
+}

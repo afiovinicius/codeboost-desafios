@@ -1,0 +1,11 @@
+/* Grid */
+
+.container {
+  width: 100%;
+  max-width: 124.6rem;
+  margin: 0 auto;
+  padding: 0rem 1.5rem;
+  @include responsive (991px) {
+    padding: 0rem 2.5rem;
+  }
+}

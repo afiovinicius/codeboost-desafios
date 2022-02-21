@@ -1,0 +1,280 @@
+/* Grid */
+.container {
+  width: 100%;
+  max-width: 1246px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+/* Header */
+
+header {
+  display: flex;
+  width: 100%;
+  height: 8.8rem;
+  position: sticky;
+  z-index: 999;
+  top: 0;
+  overflow: hidden;
+  background-color: var(--blue_dark);
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  align-items: center;
+}
+
+header .menu-mobile {
+  display: none;
+  background-color: var(--purple--);
+  color: var(--white--);
+  font-family: "Sora", sans-serif;
+  font-weight: 600;
+  padding: 0.8rem 1rem;
+  border-radius: 5px;
+}
+
+header .menu-mobile:hover {
+  background-color: var(--purple--dark--);
+  transition: 0.3s ease-in-out;
+}
+
+header nav ul {
+  display: flex;
+  margin-right: 3.2rem;
+}
+
+header nav ul li {
+  margin-left: 3.2rem;
+}
+
+header nav ul li:first-child {
+  margin-left: 0;
+}
+
+header nav ul li .links:hover {
+  color: var(--purple--);
+  transition: 0.5s ease;
+  text-decoration: line-through;
+}
+
+/* Section One */
+
+.s-hero {
+  padding: 7.2rem 0rem;
+}
+
+.s-hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.s-hero .text {
+  width: 100%;
+  max-width: 64rem;
+}
+
+.s-hero .text h1 {
+  margin-bottom: 2rem;
+}
+
+.s-hero .text p {
+  margin-bottom: 5.5rem;
+  max-width: 45.5rem;
+}
+
+.s-hero .text .links {
+  color: var(--purple--);
+}
+
+.s-hero .text .btn-icon {
+  gap: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+
+.s-hero img .picture {
+  width: 100%;
+  max-width: 52.2rem;
+  height: 56.5rem;
+}
+
+/* Section Tow */
+
+.gallery {
+  margin-bottom: 4rem;
+}
+
+.gallery .infor-main {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+  padding-bottom: 6rem;
+}
+
+.gallery .infor-main .titles {
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery .infor-main .titles.center {
+  align-items: center;
+}
+
+.gallery .infor-main .titles.center p {
+  max-width: 61rem;
+  text-align: center;
+}
+
+.gallery .titles p,
+.card p {
+  margin-top: 0.8rem;
+}
+
+.gallery .all-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+.gallery .infor-main .all-card {
+  margin-top: 4rem;
+}
+
+.gallery .all-card .card {
+  width: 100%;
+  max-width: 38.4rem;
+  height: 38.2rem;
+  background-color: var(--blue_dark);
+  border-radius: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 7.6rem;
+}
+
+.gallery .infor-main .all-card .infor-text {
+  max-width: 29.8rem;
+  margin-top: 4rem;
+  text-align: center;
+}
+
+.gallery .cards-main {
+  margin-top: 4rem;
+}
+
+.gallery .cards-main .top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4rem;
+}
+
+.gallery .gallery-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.gallery .gallery-cards .img-cards {
+  width: 100%;
+  max-width: 24rem;
+}
+
+/* Section Three */
+
+.book {
+  padding: 4.8rem 0rem;
+  background-image: url('../assets/bg-developer.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.book .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.book h2 {
+  margin-bottom: 2rem;
+}
+
+.book p {
+  text-align: center;
+  max-width: 70rem;
+  margin-bottom: 4rem;
+}
+
+/* Footer */
+
+footer {
+  background-color: var(--dark--);
+  padding: 5rem 0rem;
+}
+
+footer main {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding-bottom: 4rem;
+}
+
+footer main .area-left {
+  max-width: 28.1rem;
+}
+
+footer main .area-left img {
+  margin-bottom: 2.5rem;
+}
+
+footer main nav {
+  display: flex;
+  width: 100%;
+  max-width: 72.7rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+footer main nav .links {
+  margin-bottom: 2.4rem;
+}
+
+footer main nav .item ul li {
+  margin-bottom: 3.2rem;
+}
+
+footer main nav .item ul li:last-child {
+  margin-bottom: 0;
+}
+
+footer main nav .item ul li a {
+  font-family: "Sora", sans-serif;
+  font-weight: 400;
+  font-size: 1.4rem;
+  line-height: 150%;
+  color: var(--gray--);
+}
+
+footer main nav .item ul li a:hover {
+  color: var(--purple--);
+  transition: 0.5s ease;
+  text-decoration: line-through;
+}
+
+footer main nav .item:last-child ul li a {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+footer .copy {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 4rem;
+}

@@ -1,0 +1,511 @@
+// section hero
+.s_hero {
+  width: 100%;
+  height: 78.6rem;
+  padding-top: 17.5rem;
+  background: linear-gradient(
+    86deg,
+    #0b6eb6 -3.14%,
+    #00a5f0 25.04%,
+    #00d7d7 102.76%
+  );
+
+  .container {
+    @include flex(row, flex-start, space-between);
+
+    .text {
+      width: 100%;
+      max-width: 68.4rem;
+      height: 47.6rem;
+
+      h3 {
+        color: rgba(255, 255, 255, 0.8);
+        margin-bottom: 3.2rem;
+        font-weight: bold;
+      }
+
+      h1 {
+        color: $white;
+        margin-bottom: 4rem;
+      }
+      ul {
+        width: 100%;
+        max-width: 62rem;
+        height: 4.8rem;
+        margin-top: 6.4rem;
+        @include flex(row, center, space-between);
+
+        li {
+          display: flex;
+          align-items: center;
+
+          .icon {
+            width: 4.8rem;
+            height: 4.8rem;
+            border-radius: 50%;
+            margin-right: 1.2rem;
+            background: linear-gradient(
+              180deg,
+              rgba(53, 203, 226, 0.4) 0%,
+              rgba(53, 202, 226, 0) 100%
+            );
+            @include flex(row, center, center);
+          }
+
+          span {
+            font-size: 1.8rem;
+            line-height: 2.2rem;
+            color: $white;
+          }
+        }
+      }
+    }
+
+    .area_image {
+      width: 100%;
+      max-width: 70.6rem;
+      margin-right: -17.4rem;
+
+      h2 {
+        text-align: center;
+        margin-bottom: 6.7rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.4);
+      }
+
+      .image {
+        position: relative;
+        width: 100%;
+        height: 54rem;
+        top: 3.5rem;
+
+        img {
+          position: absolute;
+        }
+
+        .card_front {
+          z-index: 3;
+          top: 4rem;
+          left: 0;
+          max-width: 43.5rem;
+        }
+
+        .card_back {
+          z-index: 2;
+          bottom: 4.6rem;
+          right: 8.6rem;
+          max-width: 35.2rem;
+        }
+
+        .icon_logo {
+          top: 2.8rem;
+          right: 4.3rem;
+          z-index: 1;
+          max-width: 55.3rem;
+        }
+      }
+    }
+  }
+
+  @include responsive(991px) {
+    height: 89.2rem;
+    padding-top: 15rem;
+    .container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .text {
+        max-width: 98%;
+        height: 100%;
+        @include flex(column, center, center);
+        h3,
+        h1 {
+          text-align: center;
+        }
+
+        h3 {
+          margin-bottom: 2.4rem;
+        }
+
+        h1 {
+          margin-bottom: 2.6rem;
+        }
+
+        ul {
+          margin-top: 4rem;
+        }
+      }
+      .area_image {
+        margin-top: 5rem;
+        margin-right: 0;
+        h2 {
+          margin-bottom: 2rem;
+        }
+        .image {
+          height: 42rem;
+          top: 0;
+
+          .card_front {
+            top: 4rem;
+            left: 0;
+            max-width: 34rem;
+          }
+
+          .card_back {
+            bottom: 4.6rem;
+            right: 8.6rem;
+            max-width: 27.4rem;
+          }
+
+          .icon_logo {
+            top: 0rem;
+            right: 4.3rem;
+            max-width: 373.3rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// section resources
+.s_resources {
+  padding-top: 12.9rem;
+  .container {
+    @include flex(row, flex-start, space-between);
+
+    .left_area {
+      width: 100%;
+      max-width: 27.7rem;
+
+      .illust {
+        width: 100%;
+        max-width: 27.7rem;
+        position: relative;
+        margin-bottom: 2.6rem;
+        @include flex(row, center, center);
+
+        .circle {
+          position: absolute;
+          max-width: 37.7rem;
+          left: -21.4rem;
+          z-index: -1;
+        }
+      }
+
+      .text {
+        width: 100%;
+        @include flex(column, center, flex-start);
+
+        .icon {
+          margin-top: 12.9rem;
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 0.5rem;
+            height: 8.3rem;
+            top: -10.4rem;
+            left: 50%;
+            margin-left: -0.25rem;
+            background: url("../assets/points.svg") no-repeat center center;
+            position: absolute;
+          }
+        }
+
+        .infor_text {
+          margin-top: 3.6rem;
+
+          h3 {
+            color: $dark;
+            text-align: center;
+          }
+
+          p {
+            color: $gray--75;
+            text-align: center;
+            margin-bottom: 2.6rem;
+          }
+
+          ul {
+            @include flex(column, center, center);
+
+            li {
+              &:not(:last-child) {
+                margin-bottom: 1.3rem;
+              }
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
+        }
+      }
+    }
+    .right_area {
+      width: 100%;
+      max-width: 80rem;
+
+      .main_text {
+        h2 {
+          max-width: 48.8rem;
+          color: $dark;
+          margin-bottom: 4rem;
+        }
+
+        ul {
+          margin-bottom: 3.2rem;
+          li {
+            width: 100%;
+            max-width: 80rem;
+            height: 12.8rem;
+            border-bottom: 0.1rem solid $light;
+            @include flex(row, center, space-between);
+
+            .infor {
+              max-width: 69.6rem;
+              @include flex(row, center, center);
+
+              .icon {
+                margin-right: 4.3rem;
+                &:hover {
+                  opacity: 0.8;
+                  cursor: pointer;
+                }
+              }
+
+              .text {
+                max-width: 59.3rem;
+
+                h3 {
+                  color: $gray--75;
+                }
+
+                p {
+                  color: $gray--50;
+                }
+              }
+            }
+
+            .arrow {
+              width: 1.4rem;
+              height: 1.4rem;
+              cursor: pointer;
+              border-right: 2px solid $blue--low;
+              border-top: 2px solid $blue--low;
+              transform: rotate(45deg);
+              transition: all 0.3s ease-in;
+              &:hover {
+                border-color: $blue--high;
+              }
+            }
+          }
+        }
+
+        .btn_text {
+          position: relative;
+          display: inline-block;
+          font-weight: 500;
+          line-height: 112%;
+          letter-spacing: -0.5px;
+          color: $blue--high;
+          margin-bottom: 14.4rem;
+
+          &::after {
+            content: "";
+            position: absolute;
+            right: -1.8rem;
+            bottom: 0;
+            width: 1rem;
+            height: 0.3rem;
+            background-color: $yellow;
+          }
+        }
+      }
+
+      .box_card {
+        width: 100%;
+        height: 41rem;
+        position: relative;
+        border-radius: 1.2rem;
+        @include flex(row, center, space-between);
+        background: url("../assets/bg-box-card-neon.svg") no-repeat center;
+
+        .text {
+          position: absolute;
+          height: 26.3rem;
+          width: 40rem;
+          left: 6rem;
+          top: 8rem;
+
+          h2,
+          h3 {
+            color: $white;
+            margin-bottom: 1rem;
+          }
+
+          p {
+            color: $white;
+            margin-bottom: 3rem;
+          }
+
+          .buttons {
+            a {
+              &:not(:last-child) {
+                margin-right: 1.6rem;
+              }
+            }
+          }
+        }
+
+        img {
+          position: absolute;
+          left: 48.7rem;
+        }
+      }
+    }
+  }
+  @include responsive(1200px) {
+    .container {
+      .right_area {
+        .box_card {
+          img {
+            left: 49.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+// section depoiments
+.s_depoiment {
+  padding-top: 13.4rem;
+
+  .container {
+    .bar_top {
+      margin-bottom: 4rem;
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        color: $dark;
+
+        span {
+          display: block;
+          color: $gray--25;
+          font-weight: bold;
+          font-size: 4rem;
+          line-height: 112%;
+          letter-spacing: -1px;
+          margin-bottom: 1.4rem;
+        }
+      }
+
+      .swiper-pagination {
+        position: relative;
+        max-width: 5.6rem;
+        @include flex(row, flex-end, space-between);
+
+        .swiper-pagination-bullet {
+          border-radius: 1.2rem;
+          background: $yellow;
+          opacity: 0.3;
+          transition: all 0.3s ease-in;
+          &-active {
+            opacity: 1;
+            width: 1.7rem;
+          }
+        }
+      }
+    }
+
+    .slid_depoimentos {
+      overflow: hidden;
+    }
+  }
+}
+
+// section conta digital
+.s_contadigital {
+  margin-top: 12.7rem;
+
+  .container {
+    @include flex(row, center, space-between);
+
+    .text {
+      max-width: 54.2rem;
+      h2 {
+        color: $dark;
+        margin-bottom: 4.5rem;
+
+        span {
+          display: block;
+          color: $gray--25;
+          font-weight: bold;
+          font-size: 4rem;
+          line-height: 112%;
+          letter-spacing: -1px;
+          margin-bottom: 0.9rem;
+        }
+      }
+
+      ul {
+        margin-bottom: 5rem;
+
+        li {
+          display: flex;
+          align-items: center;
+          &:not(:last-child) {
+            margin-bottom: 3.7rem;
+          }
+
+          .icon {
+            width: 4.5rem;
+            height: 4.5rem;
+            background: $blue--low;
+            border-radius: 0.8rem;
+            margin-right: 2.6rem;
+            @include flex(row, center, center);
+          }
+
+          .infor {
+            h4 {
+              color: $gray--75;
+              margin-bottom: 0.4rem;
+            }
+
+            p {
+              color: $gray--50;
+            }
+          }
+        }
+      }
+    }
+
+    .image {
+      position: relative;
+      width: 100%;
+      max-width: 712rem;
+      height: 59.8rem;
+      margin-right: -60px;
+      left: 11.8rem;
+      img {
+        position: absolute;
+        &.circle {
+          right: 0;
+          bottom: 0;
+        }
+        &.phoneone {
+          left: 0.7rem;
+          bottom: 5.4rem;
+        }
+        &.phonetow {
+          top: 0.3rem;
+          left: 27rem;
+        }
+      }
+    }
+  }
+}

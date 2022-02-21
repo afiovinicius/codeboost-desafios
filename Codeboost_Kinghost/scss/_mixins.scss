@@ -1,0 +1,20 @@
+@mixin responsive($maxwidth) {
+  @media (max-width: $maxwidth) {
+    @content;
+  }
+}
+
+@mixin btn-primary {
+  display: inline-block;
+  background-color: $yellow;
+  border-radius: 0.6rem;
+  padding: 1.6rem 5.2rem;
+  font-weight: bold;
+  text-align: center;
+  color: $purple;
+  &:hover {
+    background-color: $purple-dark;
+    color: $white;
+    transition: 0.3s ease-in;
+  }
+}

@@ -1,0 +1,26 @@
+/* Configurações Gerais */
+
+* {
+  margin: 0;
+  padding: 0;
+  border: none;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-family: 'Sora', sans-serif;
+}
+
+html {
+  font-size: 62%;
+  scroll-behavior: smooth;
+  background-color: var(--dark--);
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  cursor: pointer;
+}
