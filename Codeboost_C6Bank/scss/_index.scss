@@ -1,0 +1,55 @@
+.hero {
+  height: 70rem;
+  padding-top: 19rem;
+  background: url("../assets/img-bg.png") no-repeat center/cover;
+  .container {
+    .texts {
+      max-width: 74rem;
+      p {
+        font-family: Inter;
+        color: $gray-2;
+        font-weight: 500;
+        font-size: 1.6rem;
+        line-height: 150%;
+
+        span {
+          padding: 0.4rem 1rem;
+          border-radius: 10rem;
+          background: $blue;
+          font-family: Inter;
+          color: $light;
+          font-weight: 500;
+          font-size: 1.4rem;
+          line-height: 1.7rem;
+          margin-right: 1.2rem;
+        }
+      }
+      h1 {
+        color: $light;
+        margin: 3.2rem 0rem;
+        font-family: "Montserrat";
+      }
+      h4 {
+        color: $gray-2;
+        max-width: 40rem;
+        margin-bottom: 4rem;
+      }
+    }
+  }
+  @include responsive(991px) {
+    background-position: left;
+    .container {
+      .texts {
+        margin: 0 auto;
+        text-align: center;
+        h4 {
+          margin: 3.2rem auto;
+        }
+      }
+    }
+  }
+
+  @include responsive(414px) {
+    padding-top: 15rem;
+  }
+}

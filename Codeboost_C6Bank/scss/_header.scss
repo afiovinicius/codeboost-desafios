@@ -1,0 +1,204 @@
+header {
+  width: 100%;
+  height: 7.2rem;
+  z-index: 100;
+  padding: 1.6rem 0rem;
+  position: fixed;
+  margin-top: 3.2rem;
+  background: transparent;
+  transition: 0.3s linear;
+  .container {
+    height: 4rem;
+    @include flex(row, nowrap, center, space-between);
+    .logo_menu {
+      width: 12rem;
+      height: 2.4rem;
+      background: url("../assets/logo-light.svg") no-repeat center/cover;
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+
+    nav {
+      .menu {
+        display: none;
+      }
+      ._nav {
+        width: 89.6rem;
+        @include flex(row, nowrap, center, space-between);
+        ul {
+          display: flex;
+          align-items: center;
+          li {
+            padding: 0.2rem;
+            a {
+              color: $light;
+              font-family: "Inter";
+              font-weight: 500;
+              font-size: 1.6rem;
+              line-height: 1.9rem;
+              display: flex;
+              align-items: center;
+              .arrow {
+                width: 0;
+                height: 0;
+                margin-left: 1.6rem;
+                transition: 0.3s linear;
+                border-top: 0.8rem solid $yellow;
+                border-left: 0.6rem solid transparent;
+                border-right: 0.6rem solid transparent;
+              }
+              &:hover {
+                cursor: pointer;
+                opacity: 0.8;
+                transition: 0.3s linear;
+                .arrow {
+                  transform: rotate(-180deg);
+                }
+              }
+            }
+            &:not(:last-child) {
+              margin-right: 4.6rem;
+            }
+          }
+          .drop-down {
+            display: none;
+            &.active {
+              top: 8rem;
+              padding: 2rem 0rem;
+              position: absolute;
+              border-radius: 1.2rem;
+              background: $light;
+              animation: zoomdown 0.6s linear forwards;
+              border-bottom: 0.8rem solid $blue;
+              @include flex(column, nowrap, flex-start, center);
+              li {
+                padding: 0.6rem 2rem;
+                a {
+                  color: $blue;
+                }
+                &:not(:last-child) {
+                  margin-bottom: 1.8rem;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(1024px) {
+    .container {
+      nav {
+        .menu {
+          display: flex;
+          .hamburger {
+            width: 3rem;
+            height: 1rem;
+            z-index: 12;
+            display: block;
+            position: relative;
+
+            &::after,
+            &::before {
+              content: "";
+              display: block;
+              position: absolute;
+              width: 3rem;
+              height: 0.2rem;
+              border-radius: 0.4rem;
+              background: $yellow;
+              transition: 0.4s linear;
+            }
+
+            &::before {
+              top: 0;
+            }
+
+            &::after {
+              bottom: -0.4rem;
+            }
+          }
+          &:hover {
+            cursor: pointer;
+          }
+        }
+        ._nav {
+          display: none;
+        }
+        &.active {
+          position: relative;
+          .menu {
+            .hamburger {
+              height: 2.5rem;
+              &::before {
+                top: 11px;
+                transform: rotate(-135deg);
+                transition: 0.4s linear;
+              }
+              &::after {
+                bottom: 12px;
+                transform: rotate(135deg);
+                transition: 0.4s linear;
+              }
+            }
+          }
+          ._nav {
+            width: 32rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            background: $light;
+            padding: 2rem;
+            top: 8rem;
+            right: 0;
+            animation: zoomdown 0.6s linear forwards;
+            position: absolute;
+            border-radius: 2rem;
+            ul {
+              align-items: flex-start;
+              flex-direction: column;
+              li {
+                a {
+                  color: $dark;
+                }
+                &:not(:last-child) {
+                  margin-right: 0rem;
+                  margin-bottom: 1.6rem;
+                }
+              }
+              .drop-down {
+                &.active {
+                  top: auto;
+                  position: relative;
+                  background: none;
+                  padding: 1rem;
+                  animation: zoomdown 0.3s linear forwards;
+                  border-bottom: none;
+                }
+              }
+            }
+            .btn {
+              margin-top: 3.2rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.bgOn {
+  margin-top: 0;
+  background: $light;
+  .container {
+    .logo_menu {
+      background: url("../assets/logo-dark.svg") no-repeat center/cover;
+    }
+    nav {
+      ._nav ul li a {
+        color: $dark;
+      }
+    }
+  }
+}

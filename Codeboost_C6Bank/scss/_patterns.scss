@@ -1,0 +1,114 @@
+// Colors
+$yellow: rgba(255, 206, 46, 1);
+$blue: rgba(0, 109, 143, 1);
+$dark: rgba(36, 36, 36, 1);
+$light: rgba(255, 255, 255, 1);
+$gray-1: rgba(97, 97, 97, 1);
+$gray-2: rgba(196, 196, 196, 1);
+$gray-3: rgba(250, 250, 250, 1);
+$gadrient: linear-gradient(98.6deg, #020302 7.61%, #242424 96.26%);
+
+// Mixins
+@mixin flex($direction, $wrap, $align, $justfy) {
+  display: flex;
+  flex-direction: $direction;
+  flex-wrap: $wrap;
+  align-items: $align;
+  justify-content: $justfy;
+}
+
+@mixin responsive($maxwidth) {
+  @media (max-width: $maxwidth) {
+    @content;
+  }
+}
+
+// Headings
+
+h1 {
+  font-weight: bold;
+  font-size: 4.8rem;
+  line-height: 5.9rem;
+  @include responsive(991px) {
+    font-size: 4rem;
+    line-height: 4.9rem;
+  }
+}
+
+h2 {
+  font-weight: bold;
+  font-size: 4rem;
+  line-height: 4.9rem;
+  @include responsive(991px) {
+    font-size: 3.2rem;
+    line-height: 3.9rem;
+  }
+}
+
+h3 {
+  font-weight: 500;
+  font-size: 2.8rem;
+  line-height: 3.4rem;
+  @include responsive(991px) {
+    font-size: 2.4rem;
+    line-height: 2.9rem;
+  }
+}
+
+h4 {
+  font-weight: 500;
+  font-size: 1.8rem;
+  line-height: 2.2rem;
+}
+
+p {
+  font-weight: normal;
+  font-size: 1.6rem;
+  line-height: 1.9rem;
+}
+
+// Buttons
+.btn {
+  display: inline-block;
+  font-style: normal;
+  font-family: "Montserrat";
+  font-weight: 500;
+  font-size: 1.5rem;
+  line-height: 1.8rem;
+  padding: 1.2rem 5rem;
+  text-align: center;
+  border-radius: 10rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+}
+
+.solid {
+  color: $dark;
+  background: $yellow;
+  transition: 0.3s linear;
+  &:hover {
+    cursor: pointer;
+    opacity: 0.8;
+  }
+}
+
+.outline {
+  color: $light;
+  border: 0.15rem solid $light;
+  transition: 0.3s linear;
+  &:hover {
+    background: rgba(250, 250, 250, 0.3);
+  }
+}
+
+// Animation
+@keyframes zoomdown {
+  from {
+    opacity: 0;
+    transform: translateY(-2rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0rem);
+  }
+}

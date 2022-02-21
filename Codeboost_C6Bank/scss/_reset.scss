@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: normal;
+  font-family: "Montserrat", "Inter", sans-serif;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  background: $light;
+
+  // Scroll Style
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: $yellow transparent;
+
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: $yellow;
+    border-radius: 2rem;
+  }
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+// Grid
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 124.8rem;
+  padding: 0rem 1.6rem;
+}
