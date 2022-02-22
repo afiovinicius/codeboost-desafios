@@ -1,3 +1,4 @@
+// Section Hero
 .hero {
   height: 70rem;
   padding-top: 19rem;
@@ -16,11 +17,7 @@
           padding: 0.4rem 1rem;
           border-radius: 10rem;
           background: $blue;
-          font-family: Inter;
           color: $light;
-          font-weight: 500;
-          font-size: 1.4rem;
-          line-height: 1.7rem;
           margin-right: 1.2rem;
         }
       }
@@ -51,5 +48,326 @@
 
   @include responsive(414px) {
     padding-top: 15rem;
+  }
+}
+
+// Section Resources
+.resources {
+  margin: 9rem 0rem;
+  .container {
+    @include flex(row, nowrap, flex-start, space-between);
+    .infor {
+      max-width: 59.2rem;
+      .rcs-title {
+        margin-bottom: 10rem;
+        h2 {
+          color: $dark;
+        }
+        h3 {
+          color: $gray-1;
+        }
+      }
+
+      .features {
+        @include flex(row, wrap, flex-start, space-between);
+        row-gap: 6.8rem;
+        column-gap: 3.2rem;
+        .function {
+          max-width: 28rem;
+          .icon {
+            width: 2.2rem;
+            height: 2.2rem;
+          }
+          h4 {
+            color: $dark;
+            margin-top: 2.4rem;
+            font-family: "Montserrat";
+            margin-bottom: 0.8rem;
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              left: 0;
+              top: -1.6rem;
+              width: 1.6rem;
+              height: 0.2rem;
+              background-color: $yellow;
+            }
+          }
+          p {
+            color: $gray-1;
+          }
+        }
+      }
+    }
+    .cards {
+      width: 43.4rem;
+      height: 69.4rem;
+      position: relative;
+      .card {
+        position: absolute;
+        width: 20.8rem;
+        height: 33.2rem;
+        &.one {
+          left: 0rem;
+          top: 1.2rem;
+        }
+        &.tow {
+          left: 22.7rem;
+          top: -16.3rem;
+        }
+        &.three {
+          left: 22.7rem;
+          top: 18.8rem;
+        }
+        &.for {
+          left: 0rem;
+          top: 36.3rem;
+        }
+      }
+    }
+  }
+  @include responsive(1024px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+      .infor {
+        max-width: 80%;
+        .rcs-title {
+          text-align: center;
+        }
+      }
+      .cards {
+        display: none;
+      }
+    }
+  }
+
+  @include responsive(768px) {
+    .container {
+      .infor {
+        max-width: 90%;
+        .features {
+          justify-content: center;
+        }
+      }
+    }
+  }
+
+  @include responsive(414px) {
+    .container {
+      .infor {
+        max-width: 100%;
+        .features .function {
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          h4 {
+            &::before {
+              left: 50%;
+              transform: translate(-50%, 50%);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// Section Plans
+.plans {
+  width: 100%;
+  padding: 10rem 0rem;
+  background: $gray-3;
+  .container {
+    .p-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .p-title {
+        h2 {
+          color: $dark;
+        }
+        h3 {
+          color: $gray-1;
+        }
+      }
+      .nav-tabs {
+        width: 100%;
+        max-width: 54rem;
+        height: 6.2rem;
+        padding: 1.2rem;
+        border: 0.1rem solid $gray-1;
+        border-radius: 10rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        li {
+          padding: 0rem 6rem;
+          &.active {
+            padding: 1.2rem 4rem;
+            background: $dark;
+            border-radius: 5rem;
+            animation: tabs 0.4s linear forwards;
+            a {
+              color: $light;
+            }
+          }
+          a {
+            color: $gray-1;
+            font-family: Montserrat;
+            font-weight: 600;
+            font-size: 1.6rem;
+            line-height: 2rem;
+            letter-spacing: 0.02em;
+            transition: 0.4s ease-in;
+            text-transform: uppercase;
+            @include responsive(480px) {
+              font-size: 1.4rem;
+              line-height: 1.7rem;
+            }
+          }
+        }
+      }
+    }
+
+    .nav-content {
+      margin-top: 7.2rem;
+      .p-infor {
+        display: none;
+        animation: pinfor 0.4s linear forwards;
+        &.active {
+          width: 100%;
+          height: 42.4rem;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          border-radius: 1.2rem;
+          background: $gradient;
+          padding: 10rem;
+          .p-text-infor {
+            max-width: 34.2rem;
+            h3 {
+              color: $light;
+              margin-bottom: 1.6rem;
+            }
+            p {
+              color: $gray-2;
+              margin-bottom: 4.2rem;
+            }
+            .tag {
+              display: flex;
+              align-items: center;
+              .tag-icon {
+                width: 3.2rem;
+                height: 3.2rem;
+                margin-right: 1.6rem;
+              }
+              span {
+                color: $light;
+              }
+            }
+          }
+          .plan-image {
+            height: 42.4rem;
+            width: 48.8rem;
+            position: relative;
+            .card-black {
+              top: -1.5rem;
+              left: 0;
+              width: 100%;
+              max-width: 31.6rem;
+              z-index: 2;
+              position: absolute;
+            }
+            .phone {
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              max-width: 48.8rem;
+              position: absolute;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(991px) {
+    .container {
+      .nav-content {
+        .p-infor {
+          &.active {
+            .plan-image {
+              width: 32rem;
+              .card-black {
+                top: 12.3rem;
+
+                max-width: 24.6rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(768px) {
+    .container {
+      .p-bar {
+        flex-direction: column;
+        .p-title {
+          margin-bottom: 4rem;
+        }
+      }
+      .nav-content {
+        .p-infor {
+          &.active {
+            height: 100%;
+            flex-direction: column;
+            .plan-image {
+              height: 33.8rem;
+              margin-bottom: -10rem;
+              .card-black {
+                top: 4rem;
+                max-width: 22.4rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(480px) {
+    .container {
+      .p-bar {
+        .nav-tabs {
+          li {
+            padding: 0rem 1rem;
+            &.active {
+              padding: 1.2rem 3rem;
+            }
+          }
+        }
+      }
+      .nav-content {
+        .p-text-infor {
+          margin-bottom: 4rem;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        .p-infor {
+          &.active {
+            padding: 6.4rem 3rem;
+            .plan-image {
+              height: 33.8rem;
+              margin-bottom: -6.4rem;
+            }
+          }
+        }
+      }
+    }
   }
 }

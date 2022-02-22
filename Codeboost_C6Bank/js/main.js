@@ -50,3 +50,25 @@ window.addEventListener("click", (e) => {
     }
   });
 });
+
+// Tabs
+const navTabs = document.querySelectorAll(".js-nav-tabs li");
+const boxContent = document.querySelectorAll(".p-infor-js");
+
+navTabs.forEach((navt, index) => {
+  navt.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    navTabs.forEach((navtr) => {
+      navtr.classList.remove("active");
+    });
+
+    boxContent.forEach((boxcr) => {
+      boxcr.classList.remove("active");
+    });
+
+    navt.classList.add("active");
+
+    boxContent[index].classList.add("active");
+  });
+});
