@@ -341,12 +341,10 @@
   @include responsive(480px) {
     .container {
       .p-bar {
+        text-align: center;
         .nav-tabs {
           li {
-            padding: 0rem 1rem 0rem 0rem;
-            &:not(:last-child) {
-              padding: 0rem 0rem 0rem 1rem;
-            }
+            padding: 0rem 1rem;
             &.active {
               padding: 1.2rem 3rem;
             }
@@ -367,6 +365,20 @@
             .plan-image {
               height: 33.8rem;
               margin-bottom: -6.4rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  @include responsive(375px) {
+    .container {
+      .p-bar {
+        .nav-tabs {
+          li {
+            padding: 0;
+            &.active {
+              padding: 1.2rem;
             }
           }
         }
