@@ -343,7 +343,10 @@
       .p-bar {
         .nav-tabs {
           li {
-            padding: 0rem 1rem;
+            padding: 0rem 1rem 0rem 0rem;
+            &:not(:last-child) {
+              padding: 0rem 0rem 0rem 1rem;
+            }
             &.active {
               padding: 1.2rem 3rem;
             }
