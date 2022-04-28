@@ -132,7 +132,7 @@
       flex-direction: column;
       align-items: center;
       .infor {
-        max-width: 80%;
+        max-width: 100%;
         .rcs-title {
           text-align: center;
         }
@@ -146,7 +146,6 @@
   @include responsive(768px) {
     .container {
       .infor {
-        max-width: 90%;
         .features {
           justify-content: center;
         }
@@ -154,10 +153,9 @@
     }
   }
 
-  @include responsive(414px) {
+  @include responsive(480px) {
     .container {
       .infor {
-        max-width: 100%;
         .features .function {
           text-align: center;
           display: flex;
@@ -294,17 +292,29 @@
       }
     }
   }
-  @include responsive(991px) {
+  @include responsive(1024px) {
     .container {
+      .p-bar {
+        flex-direction: column;
+        .p-title {
+          text-align: center;
+          margin-bottom: 4rem;
+        }
+      }
       .nav-content {
         .p-infor {
           &.active {
+            padding: 5rem;
             .plan-image {
-              width: 32rem;
               .card-black {
-                top: 12.3rem;
-
+                top: 25rem;
+                left: -10rem;
                 max-width: 24.6rem;
+              }
+              .phone {
+                width: 32rem;
+                right: -3rem;
+                left: auto;
               }
             }
           }
@@ -312,14 +322,9 @@
       }
     }
   }
+
   @include responsive(768px) {
     .container {
-      .p-bar {
-        flex-direction: column;
-        .p-title {
-          margin-bottom: 4rem;
-        }
-      }
       .nav-content {
         .p-infor {
           &.active {
@@ -327,10 +332,14 @@
             flex-direction: column;
             .plan-image {
               height: 33.8rem;
-              margin-bottom: -10rem;
+              margin-bottom: -5rem;
               .card-black {
                 top: 4rem;
+                left: 9rem;
                 max-width: 22.4rem;
+              }
+              .phone {
+                right: 7rem;
               }
             }
           }
@@ -342,11 +351,14 @@
     .container {
       .p-bar {
         text-align: center;
+        h2 {
+          font-size: 3rem;
+        }
         .nav-tabs {
           li {
-            padding: 0rem 1rem;
+            padding: 0;
             &.active {
-              padding: 1.2rem 3rem;
+              padding: 1.2rem;
             }
           }
         }
@@ -364,21 +376,14 @@
             padding: 6.4rem 3rem;
             .plan-image {
               height: 33.8rem;
+              width: 33.2rem;
               margin-bottom: -6.4rem;
-            }
-          }
-        }
-      }
-    }
-  }
-  @include responsive(375px) {
-    .container {
-      .p-bar {
-        .nav-tabs {
-          li {
-            padding: 0;
-            &.active {
-              padding: 1.2rem;
+              .card-black {
+                left: 0;
+              }
+              .phone {
+                right: 0;
+              }
             }
           }
         }

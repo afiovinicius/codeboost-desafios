@@ -60,25 +60,27 @@ header {
             &:not(:last-child) {
               margin-right: 4.6rem;
             }
-          }
-          .drop-down {
-            display: none;
+            .sub-menu {
+              display: none;
+            }
             &.active {
-              top: 8rem;
-              padding: 2rem 0rem;
-              position: absolute;
-              border-radius: 1.2rem;
-              background: $light;
-              animation: zoomdown 0.6s linear forwards;
-              border-bottom: 0.8rem solid $blue;
-              @include flex(column, nowrap, flex-start, center);
-              li {
-                padding: 0.6rem 2rem;
-                a {
-                  color: $blue;
-                }
-                &:not(:last-child) {
-                  margin-bottom: 1.8rem;
+              .sub-menu {
+                top: 8rem;
+                padding: 2rem 0rem;
+                position: absolute;
+                border-radius: 1.2rem;
+                background: $light;
+                animation: zoomdown 0.6s linear forwards;
+                border-bottom: 0.8rem solid $blue;
+                @include flex(column, nowrap, flex-start, center);
+                li {
+                  padding: 0.6rem 2rem;
+                  a {
+                    color: $blue;
+                  }
+                  &:not(:last-child) {
+                    margin-bottom: 1.8rem;
+                  }
                 }
               }
             }

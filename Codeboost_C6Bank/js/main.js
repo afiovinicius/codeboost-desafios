@@ -21,32 +21,29 @@ btnMobile.addEventListener("click", toggleMenu);
 btnMobile.addEventListener("touchstart", toggleMenu);
 
 // sub-menu
-const subMenu = document.querySelectorAll(".btn-dropdown");
-const dropDownMenus = document.querySelectorAll("._nav .drop-down");
-const dropAction = document.querySelectorAll("._nav .drop-down");
+const btnDropdown = document.querySelectorAll(".js-btn-dropdown");
+const dropdown = document.querySelectorAll(".sub-menu");
 
-subMenu.forEach((btn, index) => {
-  btn.addEventListener("click", (e) => {
-    e.preventDefault();
+btnDropdown.forEach((btn, index) => {
+  let botao = btn.firstElementChild;
 
-    subMenu.forEach((btnr) => {
-      btnr.classList.remove("active");
+  botao.addEventListener("click", (event) => {
+    event.preventDefault();
+
+    botao.parentElement.classList.toggle("active");
+  });
+
+  dropdown.forEach((drop) => {
+    drop.addEventListener("mouseleave", () => {
+      drop.parentElement.classList.remove("active");
     });
-
-    dropDownMenus.forEach((dropr) => {
-      dropr.classList.remove("active");
-    });
-
-    btn.parentElement.lastElementChild.classList.add("active");
-
-    dropDownMenus[index].classList.add("active");
   });
 });
 
-window.addEventListener("click", (e) => {
-  dropAction.forEach((menu) => {
-    if (e.target !== menu && !e.target.classList.contains("btn-dropdown")) {
-      menu.classList.remove("active");
+window.addEventListener("click", function (e) {
+  dropdown.forEach((drop) => {
+    if (!drop.parentElement.contains(e.target)) {
+      drop.parentElement.classList.remove("active");
     }
   });
 });
