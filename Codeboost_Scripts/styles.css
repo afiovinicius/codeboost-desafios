@@ -1,1 +1,41 @@
- 
+* {
+  padding: 0;
+  margin: 0;
+  color: hsla(0, 0%, 100%, 1);
+  border: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+
+html,
+body {
+  font-size: 62.5%;
+  background: hsla(0, 0%, 17%, 1);
+}
+
+.container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 121.6rem;
+}
+
+@media (max-width: 1214px) {
+  .container {
+    max-width: 63rem;
+  }
+}
+
+@media (max-width: 628px) {
+  .container {
+    max-width: 33.2rem;
+  }
+}
+
+h1 {
+  font-size: 32px;
+  margin-top: 6.4rem;
+  text-align: center;
+}
