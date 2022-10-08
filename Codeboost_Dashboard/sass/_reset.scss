@@ -1,0 +1,56 @@
+/* 
+===== índice =====
+  1° Reset Global
+  2° Set Html & Body
+  3° Set link and button
+  4° Set img
+==================
+*/
+
+/* 
+===== Reset Global ===== 
+*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: none;
+  list-style: none;
+  text-decoration: none;
+  font-size: 1.6rem;
+  font-weight: 400;
+  font-family: "Inter", sans-serif;
+}
+/* 
+===== Set Html & Body ===== 
+*/
+html,
+body {
+  background: #fbfbfb;
+  font-size: 62.5%;
+  // Scroll Style
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #ebc771 transparent;
+  &::-webkit-scrollbar {
+    width: 0.4rem;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #ebc771;
+  }
+}
+/* 
+===== Set link and button ===== 
+*/
+a,
+button {
+  background: transparent;
+  cursor: pointer;
+}
+/* 
+===== Set img ===== 
+*/
+img {
+  display: block;
+  width: 100%;
+}

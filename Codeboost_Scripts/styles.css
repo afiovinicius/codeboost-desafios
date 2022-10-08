@@ -35,7 +35,51 @@ body {
 }
 
 h1 {
-  font-size: 32px;
-  margin-top: 6.4rem;
+  font-size: 3.2rem;
+  margin: 6.4rem 0rem;
   text-align: center;
+}
+
+/* Styles Input Password */
+.s-passwd {
+  background: #595f65;
+  padding: 1.6rem;
+  width: 100%;
+  max-width: fit-content;
+  border-radius: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
+#i-passwd {
+  font-size: 2.4rem;
+  color: #ebc771;
+  outline: none;
+  width: 100%;
+  background: transparent;
+}
+
+#i-passwd::placeholder {
+  color: #000000;
+}
+
+.btn-eye {
+  height: 3.6rem;
+  width: 3.6rem;
+  padding: 0.2rem;
+  background: transparent;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease-in;
+}
+
+.btn-eye:hover {
+  cursor: pointer;
+  background: #ebc77150;
+}
+
+.eye-passwd {
+  width: 3.2rem;
+  height: 3.2rem;
 }
