@@ -26,17 +26,17 @@
 */
 html,
 body {
-  background: #fbfbfb;
+  background: $light;
   font-size: 62.5%;
   // Scroll Style
   scroll-behavior: smooth;
   scrollbar-width: thin;
-  scrollbar-color: #ebc771 transparent;
+  scrollbar-color: $purple transparent;
   &::-webkit-scrollbar {
     width: 0.4rem;
   }
   &::-webkit-scrollbar-thumb {
-    background-color: #ebc771;
+    background-color: $purple;
   }
 }
 /* 
@@ -51,6 +51,5 @@ button {
 ===== Set img ===== 
 */
 img {
-  display: block;
   width: 100%;
 }

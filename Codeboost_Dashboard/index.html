@@ -4,7 +4,107 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="favicon.png" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <!-- Scripts -->
+    <script src="./js/main.js" defer></script>
+    <script src="https://unpkg.com/phosphor-icons" defer></script>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Codeboost - Dashboard</title>
   </head>
-  <body></body>
+  <body class="wrapper">
+    <header>
+      <div class="container">
+        <a href="/" class="logo">
+          <img src="./assets/logo.svg" alt="Logo Codeboost" loading="lazy" />
+        </a>
+        <nav class="menu_profile">
+          <button class="btn_options_profile">
+            <span class="lines_btn"></span>
+            <span class="avatar">
+              <img
+                src="./assets/avatar.png"
+                alt="Foto do usuário"
+                loading="lazy"
+              />
+            </span>
+          </button>
+          <ul class="list_options">
+            <li class="item_menu_options">
+              <a href="#" class="link"><i class="ph-user"></i>Meu Perfil</a>
+            </li>
+            <li class="item_menu_options">
+              <a href="#" class="link"> <i class="ph-sign-out"></i>Sair</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <aside id="sidebar">
+      <button class="btn_openandclose" id="btn_sidebar">
+        <i class="ph-caret-right"></i>
+      </button>
+      <ul class="list_sidebar">
+        <li class="item_sidebar_options">
+          <i class="ph-chart-bar"></i>
+          <a href="#" class="link_sidebar">Item sidebar 01</a>
+        </li>
+        <li class="item_sidebar_options">
+          <i class="ph-cardholder"></i>
+          <a href="#" class="link_sidebar">Item sidebar 02</a>
+        </li>
+        <li class="item_sidebar_options">
+          <i class="ph-chat-centered-dots"></i>
+          <a href="#" class="link_sidebar">Item sidebar 03</a>
+        </li>
+      </ul>
+    </aside>
+
+    <main class="contents">
+      <div class="s_content active">
+        <div class="grid_content">
+          <section class="s_one"><h1 class="title">Seção 01</h1></section>
+        </div>
+      </div>
+      <div class="s_content">
+        <div class="grid_content">
+          <section class="s_tow"><h1 class="title">Seção 02</h1></section>
+        </div>
+      </div>
+      <div class="s_content">
+        <div class="grid_content">
+          <section class="s_three"><h1 class="title">Seção 03</h1></section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <div class="container">
+        <div class="sm_by">
+          <a href="https://www.instagram.com/afiovinicius/" class="sm_link">
+            <i class="ph-instagram-logo"></i>
+            Instagram
+          </a>
+          <a href="https://www.behance.net/afiovinicius" class="sm_link">
+            <i class="ph-behance-logo"></i>
+            Behance
+          </a>
+          <a href="https://www.linkedin.com/in/afiovinicius/" class="sm_link">
+            <i class="ph-linkedin-logo"></i>
+            Linkedin
+          </a>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

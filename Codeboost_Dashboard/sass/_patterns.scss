@@ -2,6 +2,8 @@
 ===== índice =====
   1° Mixins
   2° Responsive
+  3° Wrapper
+  4° Colors
 ==================
 */
 
@@ -35,3 +37,20 @@
     max-width: 33.2rem;
   }
 }
+/* 
+===== Wrapper ===== 
+*/
+.wrapper {
+  @include flex(row, wrap, flex-start, flex-start);
+  height: 100vh;
+  overflow-x: hidden;
+}
+/* 
+===== Colors ===== 
+*/
+$light: hsla(220, 23%, 97%, 1);
+$dark: hsla(258, 89%, 4%, 1);
+$grey: hsla(260, 20%, 12%, 1);
+$blue: hsla(256, 100%, 24%, 1);
+$purple: hsla(267, 69%, 39%, 1);
+$pink: hsla(321, 87%, 72%, 1);

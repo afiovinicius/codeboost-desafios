@@ -1,0 +1,35 @@
+/* 
+===== índice =====
+  1° Grid Content
+  2° Sections
+==================
+*/
+
+/* 
+===== Grid Content ===== 
+*/
+.grid_content {
+  padding: 3.2rem;
+  width: 100%;
+}
+/* 
+===== Sections ===== 
+*/
+.s_one {
+  .title {
+    font-size: 4.8rem;
+    color: $blue;
+  }
+}
+.s_tow {
+  .title {
+    font-size: 5.8rem;
+    color: $purple;
+  }
+}
+.s_three {
+  .title {
+    font-size: 6.8rem;
+    color: $pink;
+  }
+}
