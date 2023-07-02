@@ -12,3 +12,17 @@ btnEye.addEventListener("click", () => {
     iconPasswd.setAttribute("src", "./eye-slash.svg");
   }
 });
+
+const itemAccordion = document.querySelectorAll("#ac li");
+
+itemAccordion.forEach((navt) => {
+  navt.addEventListener("click", (e) => {
+    e.preventDefault();
+
+    itemAccordion.forEach((navtr) => {
+      navtr.classList.remove("active");
+    });
+
+    navt.classList.add("active");
+  });
+});

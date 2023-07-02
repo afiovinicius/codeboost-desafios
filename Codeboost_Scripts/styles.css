@@ -8,6 +8,7 @@
   font-size: 1.6rem;
   font-weight: 400;
   font-family: "Inter", sans-serif;
+  list-style: none;
 }
 
 html,
@@ -82,4 +83,91 @@ h1 {
 .eye-passwd {
   width: 3.2rem;
   height: 3.2rem;
+}
+
+.accordion {
+  width: 40rem;
+  padding: 1.6rem;
+  border: 0.1rem solid #f8f8f8;
+}
+
+.accordion .item_accordion {
+  width: 100%;
+  height: fit-content;
+}
+
+.accordion .item_accordion:not(:last-child) {
+  margin-bottom: 1.6rem;
+}
+
+.accordion .item_accordion .title_accordion {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #55555580;
+  padding: 0.8rem;
+  cursor: pointer;
+  color: #f8f8f8;
+}
+
+.accordion .item_accordion .title_accordion:hover {
+  background: #555555;
+}
+
+.accordion .item_accordion .title_accordion .icon {
+  width: 2rem;
+  height: 2rem;
+  position: relative;
+}
+
+.accordion .item_accordion .title_accordion .icon:hover {
+  background: #656565;
+}
+
+.accordion .item_accordion .title_accordion .icon::before,
+.accordion .item_accordion .title_accordion .icon::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #f8f8f8;
+  transition: all 0.3s ease-in;
+}
+
+.accordion .item_accordion .title_accordion .icon::before {
+  width: 1.6rem;
+  height: 0.2rem;
+}
+
+.accordion .item_accordion .title_accordion .icon::after {
+  width: 0.2rem;
+  height: 1.6rem;
+}
+
+.accordion .item_accordion .content_accordion {
+  display: none;
+  padding: 1.6rem 0.8rem;
+  background: #454545;
+  animation: fadeLeft 0.5s forwards ease;
+}
+
+.accordion .item_accordion.active .content_accordion {
+  display: block;
+}
+
+.accordion .item_accordion.active .title_accordion .icon::after {
+  height: 0;
+}
+
+@keyframes fadeLeft {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
