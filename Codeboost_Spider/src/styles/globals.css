@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@tailwind variants;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  outline: none;
+  font-family: "Mohave", sans-serif;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+body {
+  font-size: 62.5%;
+  height: 100vh;
+  text-rendering: optimizeLegibility;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+
+a,
+button {
+  cursor: pointer;
+  background: transparent;
+}
