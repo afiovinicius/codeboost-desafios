@@ -6,4 +6,4 @@
 - [Desafio 01 - LP Kinghost](./Codeboost_Kinghost)
 - [Desafio 02 - LP Neon](./Codeboost_Neon)
 - [Desafio 03 - LP C6Bank](./Codeboost_C6Bank)
-- [Desafio 03 - LP C6Bank](./Codeboost_Dashboard)
+- [Desafio 04 - Dashboard](./Codeboost_Dashboard)
