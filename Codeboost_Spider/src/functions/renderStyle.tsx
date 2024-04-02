@@ -2,11 +2,11 @@ import React from "react";
 
 import { TypeRenderComponentStyle } from "@/types";
 
-export function RenderComponentStyle({
+export const RenderComponentStyle = ({
   asElement,
   asStyle,
   children,
-}: TypeRenderComponentStyle) {
+}: TypeRenderComponentStyle) => {
   let computedStyle = "";
 
   if (typeof asStyle === "function") {
@@ -16,4 +16,4 @@ export function RenderComponentStyle({
   }
 
   return React.createElement(asElement, { className: computedStyle }, children);
-}
+};

@@ -10,12 +10,10 @@
   text-decoration: none;
   outline: none;
   font-family: "Mohave", sans-serif;
-  font-size: 1.6rem;
   font-weight: 400;
 }
 
 body {
-  font-size: 62.5%;
   height: 100vh;
   text-rendering: optimizeLegibility;
 }

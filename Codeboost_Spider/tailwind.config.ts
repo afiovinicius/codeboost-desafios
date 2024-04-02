@@ -7,8 +7,12 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {},
-    extend: {},
+    extend: {
+      fontFamily: {
+        mohave: ["var(--font-mohave)"],
+        roboto: ["var(--font-roboto)"],
+      },
+    },
   },
   plugins: [],
 };
