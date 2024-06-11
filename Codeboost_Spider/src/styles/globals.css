@@ -7,13 +7,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  text-decoration: none;
   outline: none;
-  font-family: "Mohave", sans-serif;
-  font-weight: 400;
+  font-size: 1.6rem;
+  font-family: "Mulish", sans-serif;
 }
 
+html,
 body {
+  font-size: 62.5%;
   height: 100vh;
   text-rendering: optimizeLegibility;
 }
@@ -22,7 +23,6 @@ img {
   width: 100%;
   display: block;
 }
-
 a,
 button {
   cursor: pointer;

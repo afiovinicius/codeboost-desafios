@@ -7,13 +7,7 @@ export const RenderComponentStyle = ({
   asStyle,
   children,
 }: TypeRenderComponentStyle) => {
-  let computedStyle = "";
-
-  if (typeof asStyle === "function") {
-    computedStyle = asStyle();
-  } else {
-    computedStyle = asStyle;
-  }
-
+  const computedStyle =
+    typeof asStyle === "function" ? (asStyle as () => string)() : asStyle;
   return React.createElement(asElement, { className: computedStyle }, children);
 };
